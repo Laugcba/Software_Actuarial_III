@@ -64,7 +64,7 @@ x
 
 
 #Coaccionar
-y <- c(1.7,"a") #character
+y <- c(1.s2w3e67,"a") #character
 r <- c(TRUE,2) #numeric
 t <- c(TRUE,2L) #integer
 y <- c(FALSE,2L,5,5+4i) #complex
