@@ -116,3 +116,86 @@ x<- list(aasdfafk=1:5)
 x$a
 x[["a"]]
 x[["a", exact=FALSE]]
+
+#Extraccion de valores faltantes 
+airquality[1:6,]
+complete.cases(airquality[1:6,])
+complete.cases(airquality[1:10,])
+completos <- complete.cases(airquality)
+airquality[completos,]
+data <- airquality[completos,]
+data[1:6,]
+
+#Al hacer una extraccion desde un vector logicos, obtengo 
+
+#Algunas operaciones 
+x<- 1:4;  y <- 6:9
+
+x+y #pocision a ´pocision
+x<2
+x>2
+x>=2
+y==8
+x*y
+x/y
+
+#En matrices
+x <- matrix(1:4,2,2); y <- matrix(rep(10,4),2,2)
+x
+y
+x*y
+x/y
+x;y;x%*%y
+y%*%x
+x%*%y
+
+#ESTRUCTURAS DE CONTROL
+#Permiten manejar el flujo de la ejecucion de un programa, dependiendo
+#de las condiciones al momento de correrlo.
+
+#If, else: para probar una condición
+#for: ejecutar un ciclo un determinado numero de veces
+#while: ejecuta un ciclo mientras se cumpla una condición
+#repeat: ejecuta un ciclo infinito
+#break: termina la ejecución de un ciclo
+#next: "salta" una iteración de un ciclo
+#return:sale de una función
+
+#If, else
+
+if(condición){
+  #algunas intrucciones
+} else {
+  ##algunas otras intrucciones
+}
+
+x=3
+if (x>5){
+  print("Mayor")
+}else {
+  print("Menor")
+}
+
+
+x=7
+if(x<5){
+  print("menor a 5")
+}else if(x<=10){
+  print("entre 5 y 10")
+}else {
+  print("Mayor a 10")
+}  
+
+x<-4
+y<- 3
+if (x>3){
+  y<- 10
+}else {
+  y<- 0
+}
+
+y <- if(x>3){
+  10
+}else {
+  0
+}
