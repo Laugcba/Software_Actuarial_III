@@ -1,0 +1,79 @@
+#Scoping Rules
+lm
+lm<-function(x){x*x}
+lm
+rm(lm)
+lm
+
+#Union de valores de simbolos
+
+#Cuando R trata de recuperar el valor de un simbolo, va buscandolo a lo
+#largo de distintos ambientes hasta encontrar el valor adecuado.
+#El orden de busqueda es:
+#1. buscar en el entorno global porel objeto
+#2. buscar en los espacios de trabajo de cada paquete en la lista de busqueda
+
+#la lista de bsuqueda es accesible a traves de la funcion search()
+
+library(swirl)
+search()
+
+#Ambito lexicologico
+hacer.potencia<- function(n){
+    potencia<-function(x){
+        x^n
+    }
+    potencia
+}
+
+#Esta funcion regresa como resultado unafuncion como su valor
+cubica<- hacer.potencia(3)
+cuadrada<- hacer.potencia(2)
+cubica(3)
+
+#Que es el entorno de una funcion
+ls(environment(cubica))
+get("n", environment(cubica))
+
+ls(environment(cuadrada))
+get("n", environment(cuadrada))
+
+
+#Estatico vs Dinamico   
+y<- 10
+f<- function(x){
+    y<-2
+    y^2+g(x)
+}
+g<- function(x){
+    x*y
+    
+}
+f(3)
+
+
+#*Estandares de escritura
+#Aumenta la legibilidad
+#fijar la longitus a 80 columnas
+#Sangria de 4 a 8 espacios
+
+#*Tipo de archivo
+#archivo de texto
+
+#*Tamaño de las funciones
+#limitar a una sola actividad
+#Leer datos separados, procesarlos, generar un reporte
+
+#Fechas en R
+#Dates 
+
+x<- as.Date("1970-01-01")
+x
+unclass(x)
+unclass(as.Date("1970-01-02"))
+unclass(as.Date("1998-07-14"))
+
+
+weekdays(as.Date("1996-04-01"))
+a <- as.POSIXct("1996-04-01")
+b<- as.POSIXlt("1996-04-01")
