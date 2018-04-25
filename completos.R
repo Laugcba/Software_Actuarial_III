@@ -20,17 +20,17 @@ completos<-function(directorio,id=1:332){
         
         x <- data.matrix(valor)         
         x[is.na(x)] <- 0               
-        p <- 0
+        suma <- 0
         
         for(k in 1:nrow(valor)){
             if(x[k,2] > 0 ){
-                p<- p + 1   
+                suma<- suma + 1   
             }  
         }
         
-        resultado<- c(resultado, p)    }
+        resultado<- c(resultado, suma)    }
     nobs<- resultado
     
     data.frame(id,nobs)
 }
-completos(directorio, 1:20)
+   completos(directorio, 1:20)

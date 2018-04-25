@@ -30,10 +30,10 @@ mediacontaminante <-function(directorio, contaminante, id=1:332){
         
         x <- data.matrix(valor)             
         x[is.na(x)] <- 0                
-        p <-colMeans(x)                  
-        resultado <- resultado + p[col]      
+        n <-colMeans(x)                  
+        resultado <- resultado + n[col]      
     }
     
     resultado
 }
-mediacontaminante(directorio,"sulfate",1:332)
+mediacontaminante(directorio,"nitrate",1:332)

@@ -31,5 +31,6 @@ corr <- function(directorio ,horizonte = 0){
     
     correlacion
 }
-corr(direccion,0)
+
+     corr(direccion,0)
 
