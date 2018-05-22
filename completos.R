@@ -1,7 +1,7 @@
 setwd("C:/Users/Laura Cabanillas/Documents/specdata")
 directorio="C:/Users/Laura Cabanillas/Documents/specdata"
 
-completos<-function(directorio,id=1:332){
+completos<-function(directorio,id){
    resultado<-c()
     
     for(i in id){
@@ -33,4 +33,4 @@ completos<-function(directorio,id=1:332){
     
     data.frame(id,nobs)
 }
-   completos(directorio, 1:20)
+   completos(directorio, 1:7)

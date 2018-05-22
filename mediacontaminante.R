@@ -1,7 +1,7 @@
 setwd("C:/Users/Laura Cabanillas/Documents/specdata")
 directorio="C:/Users/Laura Cabanillas/Documents/specdata"
 
-mediacontaminante <-function(directorio, contaminante, id=1:332){
+mediacontaminante <-function(directorio, contaminante, id){
     resultado <- 0
     
     
@@ -36,4 +36,5 @@ mediacontaminante <-function(directorio, contaminante, id=1:332){
     
     resultado
 }
-mediacontaminante(directorio,"nitrate",1:332)
+mediacontaminante(directorio,"nitrate",1:5)
+x
